@@ -1,0 +1,154 @@
+[data-theme=light] {
+  --primary: #2a83d6;
+  --background: #fff;
+  --text: #000;
+  --foco:#f8db5a;
+  --bg:url(bgLight.jpg);
+}
+
+[data-theme=dark] {
+  --primary: #e9833e;
+  --background: rgb(17, 17, 17);
+  --text: #fff;
+  --foco:#313131;
+  --bg:url(bgOF.jpg);
+}
+
+/*-------wall-e costado-----------------*/
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  font-family: "Montserrat", sans-serif;
+  cursor: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/28963/cockroach%20(2).ico"), default;
+  -webkit-overflow-scrolling: touch;
+  background: var(--bg) no-repeat center center/cover;
+}
+
+header {
+  position: relative;
+  height: 85px;
+  width: 100%;
+  top: -20px;
+  background-color: #1f1f1f;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px;
+}
+
+hr {
+  color: var(--text);
+}
+
+li {
+  list-style: none;
+  display: inline-flex;
+}
+
+header nav ul li a {
+  color: #dadada;
+  font-size: 1.2em;
+  text-decoration: none;
+  text-transform: uppercase;
+  position: relative;
+  margin: 5px 15px;
+}
+
+header nav ul li a:hover {
+  letter-spacing: 2px;
+  border-bottom: 2px solid #fff;
+}
+
+.brand {
+  width: 60px;
+  height: auto;
+  cursor: pointer;
+}
+
+header nav i {
+  color: #fff;
+  font-size: 30px;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+/*---------WALL-E----------*/
+#app {
+  -webkit-tap-highlight-color: transparent;
+}
+
+svg {
+  width: 100vw;
+  height: 100vh;
+  max-height: 450px;
+  margin-left: 4vw;
+  position: absolute;
+  bottom: -50px;
+}
+
+.isFlipped {
+  transform: scaleX(-1);
+  transform-origin: 50% 50%;
+}
+
+#leftarm {
+  transform-origin: 100% 0;
+}
+
+@media screen and (max-width: 600px) {
+  svg {
+    max-height: 200px !important;
+    margin-left: 0 !important;
+  }
+}
+/*--------SWICHT----------*/
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--background);
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: var(--primary);
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: var(--background);
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+/*----FOCO------*//*# sourceMappingURL=styles.css.map */
